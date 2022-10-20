@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .alert{
+        padding: 0.5em 1em;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color:Lightgray;
+    }
+</style>
+<body>
+    <div class="alert" id="alert-2">Some initial content</div>
+
+    <script>
+
+        const alert=document.querySelector('#alert-1');
+
+        setTimeout(
+
+        function() {
+        //Create new DOM nodes as per requirement
+        const divEl=document.createElement('div');
+        divEl.textContent='The data was saved';
+        
+        //Let's add the DOM nodes to the page
+        const headingEl= document.createElement('h2');
+        divEl.textContent='Success';
+        
+        //console.log(alert-children);//empty(no element children)
+        console.log(alert.childNodes);//not empty(has the text child)
+          
+        //get hold of the text node within the alert, and remove it
+        alert.childNodes[0].remove();
+
+        alert.appendChild(headingEl);
+        alert.appendChild(divEl)
+
+        //Within .alert, we want to insert an <hr/> element before the divEl
+
+        const hrEl=document.createElement('hr');
+        alert.insertBefore(hrEl, divEl);
+        },
+        5000
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fetch API, showing and working with fetched data</title>
+        <link rel="stylesheet" href="C:\Users\logr\Documents\Javascript\js\AJAX\fetch.css">
+        <style>
+           
+            * {
+                box-sizing: border-box;
+            }
+            h1 {
+                color: Black;
+              
+            }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                line-height: 2em;
+            }
+            .head {
+                font-size: 1.5em;
+
+                
+            }
+        
+        </style>
+    </head>
+    <body>
+        
+            <div>
+                <h1>List of workshops</h1>
+                <hr />
+                <!--<input type="search" class="search" id="search-workshops" />
+                <div class="workshops-list"></div>-->
+                <label for="sort">Sort by:</label>
+            <div>
+                <select id="sort" name="type">
+                    <option value="">-- Select --</option>
+                    <option value="a">
+                        Sort by workshop's name (ascending)
+                    </option>
+                   
+                    <option value="b">Sort by level</option>
+                    <option value="c">Sort by Duration</option>
+                </select>
+            </div>
+            <div class="container">
+                <div class="head">Workshop Name</div>
+                <div class="head">Speaker Name</div>
+                <div class="head">Workshop Duration</div>
+                <div class="head">level</div>
+                <!--<div class="head">sequence id</div>-->
+            </div>
+            <div class="workshops-list container"></div>
+        </div>
+
+
+                
+
+
+            
+
+<!--
+
+        <script>
+              let AllWorkshops=[];
+              const sortBy=document.querySelector('#sort');
+              
+              console.log(sortBy.value);
+              function sortWorkshops(){
+                let sortType=sortBy.value;
+
+                if (sortType==='a')
+                {
+                  allWorkshops.sort(function(a,b)
+                  {
+                    let l=a.name.toLowerCase();
+                    let u=b.name.toUpperCase();
+
+                    if(l<y)
+                    {
+                      return -1;
+                    }
+                    if(l>y)
+                    {
+                      return 1;
+                    }
+                    return 0;
+                  });
+                }
+
+                if (sortType==='b')
+                {
+                  allWorkshops.sort(function(a,b)
+                  {
+                    let l=a.level.toLowerCase();
+                    let u=b.level.toUpperCase();
+                    if(l<y)
+                    {
+                      return -1;
+                    }
+                    if(l>y)
+                    {
+                      return 1;
+                    }
+
+                    return 0;
+                  });
+                }
+
+                if(sortType==='c')
+                {
+                  allWorkshops.sort(function(a,b)
+                  {
+                    return a-b;
+                  });
+                }
+
+                showWorkshops(allWorkshops);
+              }
+
+              function showWorkshops(workshops) {
+                const workshopsList = document.querySelector('.workshops-list');
+                let workshopsListStr = '';
+                workshops.forEach(function (workshop) {
+                    workshopsListStr += `
+                            <div >${workshop.name}</div>
+                            <div >${workshop.speaker}</div>
+                            <div >${workshop.duration}</div>
+                            <div>${workshop.level}</div>
+                           
+                        `;
+                });
+
+                workshopsList.innerHTML = workshopsListStr;
+            }
+            fetch('https://workshops-server.herokuapp.com/workshops/1/sessions')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (workshops) {
+                    allWorkshops = workshops;
+                    showWorkshops(workshops);
+                });
+
+            sortBy.addEventListener('input', sortWorkshops);
+
+
+        </script>-->
+
+        <script>
+          let allWorkshops = [];
+          const sortBy = document.querySelector('#sort');
+
+          console.log(sortBy.value);
+          function sortWorkshops() {
+              let sortType = sortBy.value;
+
+              if (sortType === 'a') {
+                  allWorkshops.sort(function (a, b) {
+                      let x = a.name.toLowerCase();
+                      let y = b.name.toLowerCase();
+                      if (x < y) {
+                          return -1;
+                      }
+                      if (x > y) {
+                          return 1;
+                      }
+                      return 0;
+                  });
+              }
+              if (sortType === 'b') {
+                  allWorkshops.sort(function (a, b) {
+                      let x = a.name.toLowerCase();
+                      let y = b.name.toLowerCase();
+                      if (x > y) {
+                          return -1;
+                      }
+                      if (x < y) {
+                          return 1;
+                      }
+                      return 0;
+                  });
+              }
+              if (sortType === 'c') {
+                  allWorkshops.sort(function (a, b) {
+                      let x = a.level.toLowerCase();
+                      let y = b.level.toLowerCase();
+                      if (x < y) {
+                          return -1;
+                      }
+                      if (x > y) {
+                          return 1;
+                      }
+                      return 0;
+                  });
+              }
+
+              showWorkshops(allWorkshops);
+          }
+
+          function showWorkshops(workshops) {
+              const workshopsList = document.querySelector('.workshops-list');
+              let workshopsListStr = '';
+              workshops.forEach(function (workshop) {
+                  workshopsListStr += `
+                          <div >${workshop.name}</div>
+                          <div >${workshop.speaker}</div>
+                          <div >${workshop.duration}</div>
+                          <div>${workshop.level}</div>
+                         
+                      `;
+              });
+
+              workshopsList.innerHTML = workshopsListStr;
+          }
+          fetch('https://workshops-server.herokuapp.com/workshops/1/sessions')
+              .then(function (response) {
+                  return response.json();
+              })
+              .then(function (workshops) {
+                  allWorkshops = workshops;
+                  showWorkshops(workshops);
+              });
+
+          sortBy.addEventListener('input', sortWorkshops);
+      </script>
+        
+
+
+
+
+
+
+
+      </body>
+      </html>

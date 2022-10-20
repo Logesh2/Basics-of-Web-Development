@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Rollover</title>
+</head>
+<style>
+    .hide{
+         display:none
+    }
+
+    .img-fluid{
+        width:100%;
+    }
+
+    div{
+        width:200px;
+        background-color:olive;
+        color:white;
+        font-size:1.25em;
+        display:grid;
+    }
+
+    
+</style>
+<body>
+    <div class="image-rollover">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lion_%28Panthera_leo%29_male_6y.jpg/200px-Lion_%28Panthera_leo%29_male_6y.jpg" 
+             alt="lion" class="rollover-image img-fluid"/>
+        <span class="hide rollover-text">Lion</span>
+    </div>
+
+    <div class="image-rollover">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lion_%28Panthera_leo%29_male_6y.jpg/200px-Lion_%28Panthera_leo%29_male_6y.jpg" 
+             alt="lion" class="rollover-image img-fluid"/>
+        <span class="hide rollover-text">Lion</span>
+    </div>
+
+    <div class="image-rollover">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lion_%28Panthera_leo%29_male_6y.jpg/200px-Lion_%28Panthera_leo%29_male_6y.jpg" 
+             alt="lion" class="rollover-image img-fluid"/>
+        <span class="hide rollover-text">Lion</span>
+    </div>
+
+    <script>
+
+        const rolloverEls=document.querySelectorAll('.image-rollover');
+
+
+       rolloverEls.forEach(
+        function(rollover){
+        rollover.addEventListener('mouseenter', function(){
+
+            const image=rollover.querySelector('.rollover-image');
+            image.classList.add('hide');
+
+            const text=rollover.querySelector('.rollover-text');
+            text.classList.remove('hide');
+        });
+
+        rollover.addEventListener('mouseleave', function(){
+            const image =rollover.querySelector('.rollover-image');
+            image.classList.remove('hide');
+
+            const text=rollover.querySelector('.rollover-text');
+            text.classList.add('hide');
+
+        });
+     } );
+
+    </script>
+    
+</body>
+</html>

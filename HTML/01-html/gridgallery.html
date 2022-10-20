@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+<style>
+    body{
+        width: 90%;
+        max-width: auto;
+        margin: 0 auto;
+
+    }
+    .row{
+        display:grid;
+        grid-auto-flow:row;
+        grid-auto-rows: 300px;
+        grid-template-columns:1fr;
+        gap:1em;
+        width:500px;
+        height:500px;
+
+    }
+    @media(min-width:480px)
+    {
+        .row{
+            grid-template-columns:repeat(2, 1fr);
+        }
+    }
+
+    @media(min-width:768px)
+    {
+        .row{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @media(min-width:1280px)
+    {
+        .row{
+            grid-template-columns:repeat(4, 1fr);
+        }
+    }
+
+
+    
+    @media(min-width:2408px)
+    {
+        body{
+            max-width:2048px;
+        }
+        .row{
+            grid-template-columns:repeat(5, 1fr);
+        }
+    }
+    .col{
+        background-color:lightgray ;
+    }
+</style>
+<body>
+    <div class="row">
+        
+        <div class="col"></div>
+        <div class="col"></div>
+        <!--<div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>-->
+    </div>
+</body>
+</html>

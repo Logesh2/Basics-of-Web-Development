@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plan table</title>
+</head>
+<style>
+    caption{
+        caption-side:bottom;
+    }
+    Table{
+        border-collapse:collapse;
+    }
+    table,th,td{
+        border:1px solid black;
+
+    }
+    th,td{
+        padding:1em;
+    }
+    tbody, th{
+        text-align:left;
+        font-weight:normal;
+    }
+</style>
+<body>
+    <h3>Project 2</h3>
+    <p>Loren ipsum dolor sit amet consectetur adipiscining elit.</p>
+    <h3>Plans</h3>
+    <table>
+
+        <caption><strong>Hosting Plans and Pricing for various Cloud Providers</strong></caption>
+        
+        
+        <thead>
+        <tr>
+        <th rowspan="2" scope="col">Plan</th> <!-- Table Heading Cell-->
+        <th rowspan="2" scope="col">Max cluster size</th>
+        <th rowspan="2" scope="col">Cloud provider</th>
+        <th colspan="2" scope="col">Price in USD (per node)</th>
+        
+        </tr>
+        <tr>
+        <th>Billed per hour</th>
+        <th>Billed per month</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Free Tier <!-- Table Data Cell-->
+        <td>3</td>
+        <td>AWS</td>
+        <td>0</td>
+        <td>0</td>
+        </tr>
+        <tr>
+        <!-- Table Data Cell-->
+        <td>3</td>
+        <td>Azure</td>
+        <td>0</td>
+        <td>0</td>
+        </tr>
+        <tr>
+        </td> <!-- Table Data Cell-->
+        <td>3</td>
+        <td>GCP</td>
+        <td>0</td>
+        <td>0</td>
+        </tr>
+        
+        </tbody>
+        <tbody>
+        <tr>
+        <td>Basic</td> <!-- Table Data Cell-->
+        <td>15</td>
+        <td>AWS</td>
+        <td>0.10</td>
+        <td>0.05</td>
+        </tr>
+        <tr>
+        <td>Basic</td> <!-- Table Data Cell-->
+        <td>10</td>
+        <td>Azure</td>
+        <td>0.15</td>
+        <td>0.08</td>
+        </tr>
+        <tr>
+        <td>Basic</td> <!-- Table Data Cell-->
+        <td>10</td>
+        <td>GCP</td>
+        <td>0.20</td>
+        <td>0.10</td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+        <td>Pro</td> <!-- Table Data Cell-->
+        <td>200</td>
+        <td>AWS</td>
+        <td>0.07</td>
+        <td>0.03</td>
+        </tr>
+        <tr>
+        <td>Pro</td> <!-- Table Data Cell-->
+        <td>100</td>
+        <td>Azure</td>
+        <td>0.10</td>
+        <td>0.05</td>
+        </tr>
+        <tr>
+        <td>Pro</td> <!-- Table Data Cell-->
+        <td>100</td>
+        <td>GCP</td>
+        <td>0.12</td>
+        <td>0.06</td>
+        </tr>
+        </tbody>
+        </table>
+    
+</body>
+</html>

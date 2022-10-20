@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video controls id="video-player">
+        <source src="./video/mov_bbb.mp4" type="video/mp4">
+
+    </video>
+
+    <button id="btn-toggle">Play / Pause</button>
+
+
+
+    <script>
+        const videoPlayer = document.querySelector( '#video-player' );
+        const toggleBtn = document.querySelector('#btn-toggle');
+
+         // How to find out if video is playing
+            // https://stackoverflow.com/questions/6877403/how-to-tell-if-a-video-element-is-currently-playing
+
+        const isVideoPlaying = video => !!(video.currentTime>0 && !video.paused && !video.ended && video.readyState>2);
+
+        toggle.addEventListener('click', function(){
+            videoPlayer.volume = 1;
+
+            if(isvideoPlaying( videoPlayer )){
+                videoPlayer.pause();
+            }
+            else{
+                videoPlayer.play();
+            }
+        })
+    </script>
+</body>
+</html>

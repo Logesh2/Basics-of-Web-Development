@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navi desktop</title>
+</head>
+<style>
+    button{
+        background-color: black;
+        color:lightgray;
+
+    }
+    img{
+        height:20px;
+        width:20px;
+        padding-left: 200px;
+    }
+    .col{
+        padding-left:25px;
+        height:35px;
+    } 
+    button:hover{
+        color:white;
+    }
+    .b1{
+        padding-left:25px;
+        padding-right:25px;
+    }
+    .b2{
+        padding-left:25px;
+        padding-right:25px;
+    }
+    .b3{
+        padding-left:25px;
+        padding-right:25px;
+    }
+    .b4{
+        padding-left:25px;
+        padding-right:25px;
+    }
+    .b5{
+        padding-left:25px;
+        padding-right:25px;
+    }
+    .b6{
+        padding-left:25px;
+        padding-right:25px;
+    }
+    .b7{
+        padding-left:25px;
+        padding-right:25px;
+    }
+    .col{
+        background-color: black;
+        align-items: center;
+        margin-bottom: 5px;;
+    }
+    .p1{
+        background-color: lightgrey;
+        padding-top: 0px;
+        text-align: center;
+        height:25px;
+    }
+    .a1{
+        color:blue;
+        background-color: lightgray;
+    }
+    .search{
+        float:right;
+        margin:7px;
+    }
+         
+    .search button{
+        background-color: black;
+        float: right;
+        padding-left: 150px;
+        
+        margin-right: 16px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="col">
+        <img src="data:image/png;base64,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">
+    <button class="b1">Mac</button>
+    <button class="b2">ipad</button>
+    <button class="b3">iphone</button>
+    <button class="b4">Watch</button>
+    <button class="b5">TV</button>
+    <button class="b6">Music</button>
+    <button class="b7">Support</button>
+    <div class="search">
+        <form action="#">
+            <input type="text"
+                placeholder=" Search"
+                name="search">
+            <button>
+                <i class="fa fa-search">
+                </i>
+            </button>
+        </form>
+    </div>
+    </div>
+    <p class="p1">Shop now at Apple store online with many great ways to buy.Get, free, no cantact delivery,specialist and <a class="a1" href="https://www.apple.com/store">more ></a>  </p>
+</body>
+</html>

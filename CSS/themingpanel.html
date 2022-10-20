@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theming Panel</title>
+</head>
+<style>
+    Table{
+        border-collapse: separate;
+        border-spacing: 0;
+        border:1px solid navy;
+        border-radius: 5px;
+        width:1000px;
+    }
+    table,th,td{
+        
+        border-color: navy;
+
+
+    }
+    th,td{
+        padding:1em;
+    }
+    thead, th{
+        text-align:left;
+        font-weight:normal;
+        background-color: navy;
+        color:gray;
+        
+    }
+    body{
+        font-weight:bold;
+    }
+
+
+    table tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+
+/* top-right border-radius */
+table tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
+
+/* bottom-left border-radius */
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+/* bottom-right border-radius */
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+
+
+
+
+</style>
+<body>
+    <Table>
+        <Thead>
+            <tr>
+            <th>What is CSS?</th>
+            </tr>
+        </Thead>
+        <Tbody>
+            <tr>
+            <td>CSS is language for styling web pages. It stands for cascading Style sheets</td>
+            </tr>
+            </Tbody>
+    </Table>
+    
+
+   
+</body>
+</html>

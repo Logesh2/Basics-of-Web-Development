@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+</head>
+<style>
+    .h1{
+        padding-left: 1em;
+    }
+    .img1{
+        padding:15px;
+        width:200px;
+        height:200px;
+    }
+    .img2{
+        padding:15px;
+        width:200px;
+        height:200px;
+    }
+
+.row{
+    display:flex;
+    flex-direction:row;
+    /*border:2px solid crimson;
+    padding : 1em;*/
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:100px;
+    font-family:Sans-serif;
+    }
+    .col{
+    
+        /*flex-shrink: 1;*/
+        flex-basis: 30%;
+        
+    }
+    .col1{
+        top: 100px;
+        right:300px;
+        
+    }
+
+
+    .p1{
+        font-weight:bold;
+        padding-left: 1em;
+        
+    }
+    .p2{
+        font-weight:bold;
+        padding-left: 1em;
+        font-size: 130%;
+    }
+    .p3{
+        padding-left: 1em;
+
+    }
+</style>
+<body>
+    <h1 class="h1">Latest Updates</h1>
+
+    <div class="row">
+        <div class="col">
+       <img class="img1" src="https://www.telstra.com.au/content/dam/tcom/lego/2021/connected/article-box-5g-vs-nbn-96x96.jpg">
+       <p class="p1">5G from Telstra</p>
+       <p class="p2">Discover the power of Australia's best 5G</p>
+       <p class="p3">5G will change how we experience the world. Fast downloads are just in the beginenning.</p>
+       </div>
+
+
+       <div class="col1">
+        <img class="img2" src="https://www.telstra.com.au/content/dam/tcom/lego/2022/better-connected/Content-movers-824x404.jpg">
+        <p class="p1">News</p>
+        <p class="p2">Supporting customers in victoria</p>
+        <p class="p3">With increased COVID-19 restrictions in victoria, we want to help our eligible customer stay connected.</p>
+        </div>
+
+
+
+        <div class="col"><p></p>
+        </div>
+        <div class="col"> <p></p>
+        </div>
+        <div class="col"><p></p>
+        </div>
+        <div class="col"> <p></p>
+        </div>
+        <div class="col"><p></p>
+        </div>
+    </div>
+    
+</body>
+</html>

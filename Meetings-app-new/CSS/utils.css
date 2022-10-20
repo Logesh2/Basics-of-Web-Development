@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .link-unstyle {
+    text-decoration: none;
+  }
+  
+  .list-unstyle {
+    list-style: none;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+    font-weight: 500;
+  }

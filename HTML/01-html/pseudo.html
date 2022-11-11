@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo</title>
+</head>
+<style>
+    .btn{
+        padding: 0.5em 0.5em;
+        font-family:'Times New Roman';
+        cursor:pointer;
+
+    }
+    .btn:hover{
+        background-color: grey;
+        color: green;
+
+    
+    }
+    p::first-line{
+        background-color:red;
+    }
+    p::first-letter{
+        background-color:green;
+    }
+    *{
+        background-color:grey;
+    }
+    :first-of-type{
+        border:1px solid black;
+    }
+    :first-child{
+         border:1px solid black; 
+    }
+    p1:nth-child(2)
+    {
+        background:blue;
+    }
+</style>
+<body>
+    <button href="#" class="btn">Link</button>
+    <button class="btn">Click me</button>
+
+    <section>
+        <a href="#" class="x y">Link with section</a>
+        <p class="para">Loren ipsum dolor sit amet consectetur adipiscining elit. Dolore, quae expedita! Quasi dicta rem ea, vitae, Iaudantium daloremque corrupti nulla asperiores, quos dolorum sunt tenetur majories? Volupyatum eius sunt ea!
+        <a href="#" class="x">Link within para 1</a>
+        </p>
+
+    
+    <div>
+    <p>Loren ipsum dolor sit amet consectetur adipiscining elit. Dolore, quae expedita! Quasi dicta rem ea, vitae, Iaudantium daloremque corrupti nulla asperiores, quos dolorum sunt tenetur majories? Volupyatum eius sunt ea!</p>
+    <p1>Loren ipsum dolor sit amet consectetur adipiscining elit
+    Loren ipsum dolor sit amet consectetur adipiscining elit
+    Loren ipsum dolor sit amet consectetur adipiscining elit</p1>
+    </div>
+    </section>
+</body>
+</html>

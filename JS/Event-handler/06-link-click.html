@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.google.com" class="link-confirm">Google Search</a>
+    <a href="https://www.twitter.com" class="link-confirm">Twitter</a>
+    <a href="https://www.publicissapient.com" class="link-confirm">Sapient</a>
+    
+    <script>
+        const confirmLinks = document.querySelectorAll('.link-confirm');
+
+        confirmLinks.forEach(
+            function(link){
+                link.addEventListener('click',function(event){
+
+                    if(!confirm('Are you sure you want to leave this web site?')){
+                        event.preventDefault();
+                    }
+                });
+            }
+        );
+    </script>
+</body>
+</html>

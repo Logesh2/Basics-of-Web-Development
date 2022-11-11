@@ -1,0 +1,61 @@
+:root{
+    background-color: chocolate;
+}
+nav ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+
+}
+nav li{
+    display:inline-block;
+    padding-right:1px;
+    padding-left:1px;
+    margin-top:0.5x;
+
+}
+.b1{
+    background-color: navy;
+    color: white;
+    border-color: navy;
+    border-radius: 0.5em;
+    
+}
+.b2{
+    background-color: olive;
+    color: white;
+    border-color: olive;
+    border-radius: 0.5em;
+}
+.b3{
+    background-color: crimson;
+    color: white;
+    border-color: crimson;
+    border-radius: 0.5em;
+}
+.b4{
+    background-color: navy;
+    color: white;
+    border-color: navy;
+    border-radius: 0.5em;
+}
+.b1:hover{
+       display: none;
+       color: gray;
+
+}
+.b2:hover{
+       display: inline-block;
+       color: gray;
+
+}
+.b3:hover{
+       display: inline-block;
+       color: gray;
+
+}
+.b4:hover{
+       display: inline-block;
+       color: gray;
+
+}

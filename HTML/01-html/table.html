@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+    caption{
+        caption-side:bottom;
+    }
+    Table{
+        border-collapse:collapse;
+    }
+    table,th,td{
+        border:1px solid black;
+
+    }
+    th,td{
+        padding:1em;
+    }
+    tbody, th{
+        text-align:left;
+        font-weight:normal;
+    }
+    tbody tr:nth-child(2){
+        background-color: lightgray;
+    }
+</style>
+<body>
+    <Table>
+        <thead>
+            <tr>
+                <th rowspan="2">S no</th>
+                <th rowspan="2">Name</th>
+                <th colspan="2">Points</th>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <Caption>
+            Semester 8 Marksheet
+        </Caption>
+        
+        <Tbody>
+            <tr>
+                <td>1</td>
+                <td>Logesh</td>
+                <td>HTML</td>
+                <td>45</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Sathish</td>
+                
+                <td>HTML</td>
+                <td>54</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Babu</td>
+                
+                <td>HTML</td>
+                <td>60</td>
+            </tr>
+        </Tbody>
+    </Table>
+    
+</body>
+</html>

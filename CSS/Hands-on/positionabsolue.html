@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+</head>
+<style>
+    .dialog_header{
+        position:relative;
+        border-top-left-radius:9px;
+        border-top-right-radius:9px;
+    }
+    .dialog--info .dialog_header{
+        background-color: blue;
+    }
+    .dialog--error .dialog_header{
+        background-color: crimson;
+    }
+    .dialog_close::after{
+        position:absolute;
+        bottom: 20px;
+        right: 20px;
+        content:"\00D7";
+        font-size: 1.5em;
+        color:white;
+    }
+    .dialog_title{
+        margin:0;
+        text-align: center;
+        color:ivory;
+    }
+</style>
+<body>
+    <div class="dialog-box-demo">
+        <div class="dialog dialog--info"
+             role="dialog"
+             aria-labelledby="login-dialog-title"
+             aria-describedby="login-dialog-content">
+            
+            <div class="dialog_header">
+                <h2 class="dialog_title" id="login-dialog-title">Login</h2>
+                <span class="dialog_close"></span>
+                 
+            </div>
+            <div class="dialog_body"
+            id="login-dialog-content">
+            Paragraphs are commonly numbered using the decimal system, 
+            where (in books) the integral part of the decimal represents 
+            the number of the chapter and the fractional parts are arranged 
+            in each chapter in order of magnitude. Thus in Whittaker and 
+            Watson's 1921 A Course of Modern Analysis, chapter 9 is devoted 
+            to Fourier Series; within that chapter §9.6 introduces Riemann's 
+            theory
+        </div>
+    </div>
+</body>
+</html>

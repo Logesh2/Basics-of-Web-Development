@@ -1,0 +1,22 @@
+
+
+<script>
+
+    
+
+
+    const xhr= new XMLHttpRequest();
+
+
+    xhr.addEventListener('load',function(){
+        const workshopStr=xhr.responseText;
+        console.log(workshopStr);
+        console.log(typeof workshopStr);
+
+
+        const workshops=JSON.parse(workshopStr);
+        console.log(workshops);
+    });
+
+    console.log(1);
+</script>

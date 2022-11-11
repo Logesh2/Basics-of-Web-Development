@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Style</title>
+</head>
+
+<body>
+    <div id="data-saved-message">
+        Yoyr data have been saved
+        
+    </div>
+
+    <script>
+        const message=document.querySelector(
+            '#data-saved-message');
+
+
+
+            message.style.padding='1em';
+            message.style.color='white';
+            message.style.backgroundcolor='olive';
+            message.style.fontsize='240px';
+
+        alert(message.style.padding);
+    </script>
+    
+</body>
+</html>

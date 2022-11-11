@@ -1,0 +1,256 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <script src="C:\Users\logr\Documents\Javascript\js\assignment.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="Normalize.css" />
+    <style>
+      nav {
+        background-color: black;
+        height: 64px;
+        font-size: 24px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      #nav-links {
+        margin: 0;
+        padding: 0;
+        margin-left: 70px;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      form {
+        display: none;
+      }
+      .nav-menu {
+        display: inline-block;
+        margin-top: 15px;
+        position: relative;
+      }
+      .nav-menu a {
+        color: lightgray;
+        text-decoration: none;
+        padding: 0 1em;
+      }
+      .nav-menu a:hover {
+        color: white;
+      }
+      @media (max-width: 720px) {
+        nav {
+          margin-top: -15px;
+          position: static;
+        }
+        #nav-links {
+          background-color: black;
+          width: 100%;
+        }
+        .nav-menu {
+          display: block;
+          width: 90%;
+          margin: 15px auto;
+          border-top: 1px solid gray;
+        }
+        .logo {
+          padding-top: 5px;
+        }
+        form {
+          display: block;
+        }
+        form input {
+          width: 95%;
+          background-color: rgb(71, 70, 70);
+          border-radius: 10px;
+          height: 20px;
+          margin: 0.5em 0;
+        }
+        .icon a {
+          display: none;
+        }
+      }
+    </style>
+    <title>Apple nav</title>
+  </head>
+  <body>
+    <nav>
+      <ul id="nav-links">
+        <li class="nav-menu logo">
+          <a href="Assignment-6.html" class="fa fa-apple"></a>
+        </li>
+        <form action="">
+          <input
+            type="text"
+            class="fa fa-search"
+            placeholder="Search apple.com"
+          />
+        </form>
+        <li class="nav-menu"><a href="#">Mac</a></li>
+        <li class="nav-menu"><a href="#">iPad</a></li>
+        <li class="nav-menu"><a href="#">iPhone</a></li>
+        <li class="nav-menu"><a href="#">Watch</a></li>
+        <li class="nav-menu"><a href="#">TV</a></li>
+        <li class="nav-menu"><a href="#">Music</a></li>
+        <li class="nav-menu"><a href="#">Support</a></li>
+        <li class="nav-menu icon">
+          <a href="#" class="fa fa-search"></a>
+        </li>
+        <li class="nav-menu icon">
+          <a href="#" class="fa fa-shopping-bag"></a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            h1 {
+                color: gray;
+                font-style: oblique;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                line-height: 2em;
+            }
+            .head {
+                font-size: 1.5em;
+
+                font-style: oblique;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>List of workshops</h1>
+            <hr />
+            <label for="sort">Sort by</label>
+            <div>
+                <select id="sort" name="type">
+                    <option value="">-- Select --</option>
+                    <option value="a">
+                        Sort by workshop's name (ascending)
+                    </option>
+                    <option value="b">
+                        Sort by workshop's name (descending)
+                    </option>
+                    <option value="c">Sort by level</option>
+                </select>
+            </div>
+            <div class="container">
+                <div class="head">Workshop Name</div>
+                <div class="head">Speaker Name</div>
+                <div class="head">Workshop Duration</div>
+                <div class="head">level</div>
+                <div class="head">sequence id</div>
+            </div>
+            <div class="workshops-list container"></div>
+        </div>
+
+        <script>
+            let allWorkshops = [];
+            const sortBy = document.querySelector('#sort');
+
+            console.log(sortBy.value);
+            function sortWorkshops() {
+                let sortType = sortBy.value;
+
+                if (sortType === 'a') {
+                    allWorkshops.sort(function (a, b) {
+                        let x = a.name.toLowerCase();
+                        let y = b.name.toLowerCase();
+                        if (x < y) {
+                            return -1;
+                        }
+                        if (x > y) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                }
+                if (sortType === 'b') {
+                    allWorkshops.sort(function (a, b) {
+                        let x = a.name.toLowerCase();
+                        let y = b.name.toLowerCase();
+                        if (x > y) {
+                            return -1;
+                        }
+                        if (x < y) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                }
+                if (sortType === 'c') {
+                    allWorkshops.sort(function (a, b) {
+                        let x = a.level.toLowerCase();
+                        let y = b.level.toLowerCase();
+                        if (x < y) {
+                            return -1;
+                        }
+                        if (x > y) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                }
+
+                showWorkshops(allWorkshops);
+            }
+
+            function showWorkshops(workshops) {
+                const workshopsList = document.querySelector('.workshops-list');
+                let workshopsListStr = '';
+                workshops.forEach(function (workshop) {
+                    workshopsListStr += `
+                            <div >${workshop.name}</div>
+                            <div >${workshop.speaker}</div>
+                            <div >${workshop.duration}</div>
+                            <div>${workshop.level}</div>
+                            <div>${workshop.sequenceId}</div>
+                        `;
+                });
+
+                workshopsList.innerHTML = workshopsListStr;
+            }
+            fetch('https://workshops-server.herokuapp.com/workshops/1/sessions')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (workshops) {
+                    allWorkshops = workshops;
+                    showWorkshops(workshops);
+                });
+
+            sortBy.addEventListener('input', sortWorkshops);
+        </script>
+    </body>
+</html>

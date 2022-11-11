@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>microsoftnavigation</title>
+    <style>
+        nav{
+            width:95%;
+            padding-left: 5%;
+            padding-right: 5%;
+            display:flex;
+            justify-content: space-between;
+        }
+        .list-unstyled{
+            display:flex;
+            list-style-type:none;
+            padding:0;
+            margin:0;
+        }
+        nav .left-sidebar{
+            align-items:center;
+        }
+        nav img{
+            height:2em;
+            width:2em;
+        }
+        nav a{
+            text-decoration: none;
+            color:initial;
+            padding:0.5em;
+            margin:0.5em;
+        }
+        nav a:hover{
+            border-bottom: 2px solid black;
+        }
+        .d-flex{
+            display: flex;
+        }
+        nav .left-sidebar{
+            align-items:center;
+        }
+        .microsoft-product-link{
+            position:relative;
+        }
+        .microsoft-product{
+            display:none;
+            position:absolute;
+            right:-120px;
+            top:24px;
+            width:600px;
+            padding:1.5em;
+            box-shadow: 0px 0px 1px 1px lightgray;
+
+        }
+        .microsoft-product-link:hover .microsoft-product{
+            display:block;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <ol class="list-unstyled d-flex  left-sidebar">
+            <li><a href="#"><img src="C:\Users\logr\Downloads\Sample\Microsoft.png" alt="microsoft logo"/></a></li>
+            <li><a href="#">Microsoft 365</a></li>
+            <li><a href="#">Office</a></li>
+            <li><a href="#">Windows</a></li>
+            <li><a href="#">Surface</a></li>
+            <li><a href="#">X box</a></li>
+            <li><a href="#">Support</a></li>            
+        </ol></div>
+        <div>
+            <ol clas="list">
+
+            </ol class="list-unstyled d-flex sidebar">
+            <li class="microsoft-product-link"><a href="#">All Microsoft</a>
+            <div class="microsoft-product">
+                Paragraphs are commonly numbered using the decimal system, 
+                where (in books) the integral part of the decimal represents the number
+                 of the chapter and
+
+            </div>
+            </li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Account</a></li>
+            
+        </div>
+    </nav>
+    
+</body>
+</html>

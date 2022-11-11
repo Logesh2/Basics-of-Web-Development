@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window load</title>
+    <link rel="stylesheet" href="C:\Users\logr\Documents\Javascript\js\Event-handler\CSS\app.css">
+
+</head>
+<body>
+    <h1>The Window Events</h1>
+    <hr/>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipsiicing elit.
+        Amet at tempore beatae in repellendus nobis accusantium
+        magni maiores sequi soluta quidem aspernatur.<br/>
+
+        <img src="C:\Users\logr\Documents\Javascript\Tiger.jfif" alt="Tiger">
+        <a href=""></a>
+
+    </p>
+    <div class="window-size"></div>
+
+    <script>
+
+        console.log(1);
+        window.addEventListener('load',function(){
+
+            console.log('Page has loaded');
+        });
+
+
+        console.log(2);
+        window.addEventListener('beforeunload',function(){
+            console.log('bye bye');
+        });
+
+        //Explore: Debouncing
+        window.addEventListener('resize',function(){
+            const ws=document.querySelector('window-size');
+            ws.textContent=`${window.innerWidth}px, ${window.innerHeight}px`;
+
+        });
+
+        //Supported for any elements that have a scroll bar
+        window.addEventListener('scroll',function(){
+            const sp=document.querySelector('#scroll-position');
+            sp.textContent=`${document.documentElement.scrollTop}px`;
+        });
+
+
+    </script>
+    <script src="C:\Users\logr\Documents\Javascript\js\Event-handler\jsfiles\app.js"></script>
+    
+</body>
+</html>

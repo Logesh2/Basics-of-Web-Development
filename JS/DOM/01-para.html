@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="para" id="para-0">
+
+    </div>
+
+    <div class="para" id="para-1">
+        <p>
+        Text messaging, or texting, is the act of composing and 
+        sending electronic messages, typically consisting of alphabetic </p>
+    </div>
+
+    <div class="para" id="para-2">
+        <p>
+            Text messaging, or texting, is the act of composing and 
+            sending electronic messages, typically consisting of alphabetic </p>
+    </div>
+
+    <div class="para" id="para-3">
+        <p>
+            Text messaging, or texting, is the act of composing and 
+            sending electronic messages, typically consisting of alphabetic </p>
+    </div>
+
+    <div class="para" id="para-4">
+
+    </div>
+</body>
+
+<script>
+    const para0=document.querySelector('#para-0');
+    const para1=document.querySelector('#para-1');
+    const para2=document.querySelector('#para-2');
+    const para3=document.querySelector('#para-3');
+    const para4=document.querySelector('#para-4');
+
+    console.log(para1.textContent);
+
+        setTimeout(function () {
+            para0.innerHTML = `<p> Text messaging, or texting, is the act of composing</p>`;
+        }, 2000);
+
+        setTimeout(function () {
+            para4.innerHTML = `<p> Text messaging, or texting, is the act of composing </p>`;
+        }, 3000);
+
+        console.log(para1.textContent);
+
+
+        setTimeout(function () {
+            para1.innerHTML =`
+
+      <span>Text messaging, or texting, is the act of composing</span>`;
+
+        }, 4000);
+
+        
+        setTimeout(function () {
+
+              para1.setAttribute('id','altered-id');
+        }, 
+        5000);
+
+
+        setTimeout(function () {
+            
+            para1.setAttribute('data-attribute', 'changed attribute');
+        }, 
+        6000);
+
+</script>
+</html>

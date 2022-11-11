@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #data-saved-message{
+        padding:1em;
+        color:white;
+        background-color: olive;
+        font-size: 24px;
+
+    }
+</style>
+<body>
+    <div id="data-saved-message">
+        Your data have been saved
+        
+    </div>
+    <script>
+        const message=document.querySelector('#data-saved-message');
+
+        message.classList.add('message');
+        message.classList.add('message-success');
+
+        console.log(message.classList.contains(
+            'message'
+        ));
+
+        setTimeout(
+            function(){
+
+                message.classList.remove('message-success');
+
+                message.classList.add('message-error');
+                message.textContent='Sorry you lost all data';
+            },  5000
+        );
+    </script>
+
+</body>
+</html>

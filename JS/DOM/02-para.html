@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .colour{
+        background-color: green;
+    }
+</style>
+<body>
+    
+
+    <div class="para">
+        <p id="para">
+            Text messaging, or texting, is the act of composing and 
+        sending electronic messages, typically consisting of alphabetic
+        </p>
+      </div>
+  
+      <form action="#">
+
+        <input id="text" type="text" placeholder="Type Something" />
+        <button id="alert-button" type="button">submit</button>
+
+      </form>
+
+
+</body>
+<script>
+
+    
+    const text = document.querySelector("#para");
+    const input = document.querySelector("#text");
+    const button = document.querySelector("#alert-button");
+
+    button.onclick=function(){
+        alert(text.textContent);
+    };
+
+
+    function validatetext() {
+      const l = input.value.length;
+      if (l >= 8) {
+        input.classList.add("colour");
+      } 
+      else {
+        input.classList.remove("colour");
+      }
+    }
+    input.addEventListener("keyup", validatetext);
+
+
+    function validateform() {
+      const data = input.value.length;
+      if (data < 8) {
+        event.preventDefault();
+        input.innerHTML = "Form cannot be submitted";
+        
+        console.log("This form cannot be submitted");
+      } else {
+        console.log("form has submitted succesfully");
+      }
+    }
+    button.addEventListener("click", validateform);
+
+
+</script>
+</html>

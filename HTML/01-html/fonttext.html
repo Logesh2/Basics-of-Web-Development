@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonttext</title>
+</head>
+<style>
+    section{
+        display:inline-block;
+        vertical-align:top;
+        width:300px;
+        height:200px;
+        padding:1em;
+        border-radius: 1.5px black solid;
+        font-size:1.5em;
+        line-height: 1.5em;
+
+
+    }
+    section:nth-of-type(1){
+        font-family:Arial, Helvetica, sans-serif;
+        overflow:visible;
+    }
+    section:nth-of-type(2){
+        font-family:'Times New Roman', cursive;
+        overflow: hidden;
+    }
+    p:not(.x){
+        text-transform: uppercase;
+    }
+    section:n-th-type(4)
+    {
+
+        font: size 14px; ;
+    }
+    .clear{
+        clear:center;
+    }
+</style>
+<body>
+    <!--p*25>lorem and ctrl+spc-->
+    <!--table>thead+tbody>tr*3>td*4
+        --Used to create tables with the above code-->
+        <section>
+        <p class="x">Paragraphs are commonly numbered using the decimal system, where 
+            (in books) the integral part of the decimal represents the number 
+           of the chapter and the fractional parts are arranged in each chapter 
+           in order of magnitude. Thus in Whittaker and Watson's 1921 A Course 
+           of Modern Analysis, chapter 9 is devoted to Fourier Series; within that 
+           chapter §9.6 introduces Riemann's theory</p>
+        <p >Paragraphs are commonly numbered using the decimal system, where (in books) the integral part of the decimal represents the number of the chapter and the fractional parts are arranged in each chapter in order of magnitude. Thus in Whittaker and Watson's 1921 A Course of Modern Analysis, chapter 9 is devoted to Fourier Series; within that chapter §9.6 introduces Riemann's theory</p>
+        <p>Paragraphs are commonly numbered using the decimal system, where (in books) the integral part of the decimal represents the number of the chapter and the fractional parts are arranged in each chapter in order of magnitude. Thus in Whittaker and Watson's 1921 A Course of Modern Analysis, chapter 9 is devoted to Fourier Series; within that chapter §9.6 introduces Riemann's theory</p>
+        <p>Paragraphs are commonly numbered using the decimal system, where (in books) the integral part of the decimal represents the number of the chapter and the fractional parts are arranged in each chapter in order of magnitude. Thus in Whittaker and Watson's 1921 A Course of Modern Analysis, chapter 9 is devoted to Fourier Series; within that chapter §9.6 introduces Riemann's theory</p>
+        <p class="clear">Paragraphs are commonly numbered using the decimal system, where (in books) the integral part of the decimal represents the number of the chapter and the fractional parts are arranged in each chapter in order of magnitude. Thus in Whittaker and Watson's 1921 A Course of Modern Analysis, chapter 9 is devoted to Fourier Series; within that chapter §9.6 introduces Riemann's theory</p>
+        </section>
+</body>
+</html>

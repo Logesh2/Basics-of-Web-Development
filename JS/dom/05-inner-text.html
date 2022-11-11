@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .alert{
+        padding: 0.5em 1em;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color:Lightgray;
+    }
+</style>
+<body>
+    <!--Diff: innerHTML and text content-->
+    <!--Reading inner html and appending to it-->
+
+    <div class="alert" id="alert-1">Some initial content</div>
+    <div class="alert" id="alert-2">Some initial content</div>
+    <script>
+        const alert1=document.querySelector('#alert-1');
+        const alert2=document.querySelector('#alert-2');
+
+        console.log(alert1.textContent);
+
+        setTimeout(function(){
+            alert1.textContent=`
+            <h2>Success!</h2>
+            <div>The data was saved</div>`;
+        }, 5000);
+
+        setTimeout(function(){
+            alert2.innerHTML=`
+            <h2>Success</h2>
+            <div>The data was saved</div>`;
+        }, 5000);
+
+    </script>
+</body>
+</html>
